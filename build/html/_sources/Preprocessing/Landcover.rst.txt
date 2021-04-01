@@ -2,158 +2,105 @@
 Landcover Data Preparation
 ===========================
 
-MISLAND-North Africa draws on a number of data sources. The data sets listed below are 
-owned/made available by the following organizations and individuals under 
-separate terms as indicated in their respective metadata.
+MISLAND North Africa usese the European Space Agency (ESA) Climate Change Initiative (CCI) land cover dataset. This dataset provides global maps describing the land surface into 22 classes, which have been defined using the United Nations Food and Agriculture Organization’s (UN FAO) Land Cover Classification System (LCCS). In addition to the land cover (LC) maps, four quality flags are produced to document the reliability of the classification and change detection.
+In order to ensure continuity, these land cover maps are consistent with the series of global annual LC maps from the 1990s to 2015 produced by the European Space Agency (ESA) Climate Change Initiative (CCI), which are also available on the ESA CCI LC viewer.
 
-NDVI
-----
+The dataset can be downloaded here from the `ESA C3S archives`_
 
-+------------------+-----------+---------+--------+------------------+
-| Sensor/Dataset   | Temporal  | Spatial | Extent | License          |
-+==================+===========+=========+========+==================+
-| `LANDSAT7`_      | 2001-2020 | 30 m    | Global | `Public Domain`_ |
-+------------------+-----------+---------+--------+------------------+
-| `MOD13Q1-coll6`_ | 2001-2016 | 250 m   | Global | `Public Domain`_ |
-+------------------+-----------+---------+--------+------------------+
+.. _ESA C3S archives: https://developers.google.com/earth-engine/datasets/catalog/landsat
 
-.. _LANDSAT7: https://developers.google.com/earth-engine/datasets/catalog/landsat
-.. _AVHRR/GIMMS: https://glam1.gsfc.nasa.gov
-.. _MOD13Q1-coll6:
-   https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod13q1_v006
-   
-Soil moisture
--------------
+Data Preprocessing Steps
+------------------------
+1. Unzip the C3S-LC-L4-LCCS-Map-300m-P1Y-yyyy-v2.1.1 data from the compressed format that it comes in after downloading. Closely examine the contents of this folder as it has various files.
 
-+----------------+-----------+---------------+--------+------------------+
-| Sensor/Dataset | Temporal  | Spatial       | Extent | License          |
-+================+===========+===============+========+==================+
-| `MERRA 2`_     | 1980-2016 | 0.5° x 0.625° | Global | `Public Domain`_ |
-+----------------+-----------+---------------+--------+------------------+
-| `ERA I`_       | 1979-2016 | 0.75° x 0.75° | Global | `Public Domain`_ |
-+----------------+-----------+---------------+--------+------------------+
+.. image:: ../_static/Images/LC1.png
+     :height: 400
+     :width: 610
+     :alt: LocateIT
 
-.. _MERRA 2: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-Land
-.. _ERA I: 
-   https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-interim-land
+2. Load the unzipped NetCDF4 raster onto qgis and select the lccs_class on the “Select Raster Layers to Add” dialog.
 
-Precipitation
--------------
+.. image:: ../_static/Images/LC2.png
+     :height: 277
+     :width: 550
+     :alt: LocateIT
 
-+----------------------+-----------+-------------+---------+------------------+
-| Sensor/Dataset       | Temporal  | Spatial     | Extent  | License          |
-+======================+===========+=============+=========+==================+
-| `GPCP v2.3 1 month`_ | 1979-2019 | 2.5° x 2.5° | Global  | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `GPCC V6`_           | 1891-2019 | 1° x 1°     | Global  | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `CHIRPS`_            | 1981-2016 | 5 km        | 50N-50S | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `PERSIANN-CDR`_      | 1983-2015 | 25 km       | 60N-60S | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
+3.  Once the raster layer is loaded add the vector layer of the OSS region and navigate to Raster > Extraction > Clip Raster by Mask Layer
 
-.. _GPCP v2.3 1 month: https://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html
-.. _GPCC V6: https://www.esrl.noaa.gov/psd/data/gridded/data.gpcc.html
-.. _CHIRPS:  http://chg.geog.ucsb.edu/data/chirps
-.. _PERSIANN-CDR: http://chrsdata.eng.uci.edu
+.. image:: ../_static/Images/LC3.png
+     :height: 277
+     :width: 550
+     :alt: LocateIT
 
-Evapotranspiration
--------------------
+4.  Once the raster layer has been clipped to the area of interest, open the processing toolbox and search for r.reclass and select the GRASS>Raster>r.reclass  tool.
 
-+----------------+-----------+---------+--------+------------------+
-| Sensor/Dataset | Temporal  | Spatial | Extent | License          |
-+================+===========+=========+========+==================+
-| MOD16A2_       | 2000-2014 | 1 km    | Global | `Public Domain`_ |
-+----------------+-----------+---------+--------+------------------+
+.. image:: ../_static/Images/LC4.png
+     :height: 277
+     :width: 550
+     :alt: LocateIT
 
-.. _MOD16A2:
-   https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod16a2_v006
+5.  On the ”r.reclass” dialog that pops up, select the clipped land cover data as the input layer and paste the following reclassification rules into the “Reclass rules text box” and save the output in a desired location.
 
-Land cover
------------
+.. image:: ../_static/Images/LC5.png
+     :height: 277
+     :width: 550
+     :alt: LocateIT
 
-+-----------------------+-----------+---------+--------+-----------------+
-| Sensor/Dataset        | Temporal  | Spatial | Extent | License         |
-+=======================+===========+=========+========+=================+
-| `ESA CCI Land Cover`_ | 1992-2018 | 300 m   | Global | `CC by-SA 3.0`_ |
-+-----------------------+-----------+---------+--------+-----------------+
+6.  Once the data is reclassified you can upload the QML style layer to visualize and validate the reclassified land cover data.
 
-.. _ESA CCI Land Cover: https://www.esa-landcover-cci.org
-.. _CC by-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/igo
+.. image:: ../_static/Images/LC6.png
+     :height: 277
+     :width: 550
+     :alt: LocateIT
 
-Soil carbon
------------
+Data Upload to MISLAND service
+-------------------------------
+To upload the Land cover dataset to the admin panel. Follow these simple steps
 
-+-----------------------+----------+---------+--------+-----------------+
-| Sensor/Dataset        | Temporal | Spatial | Extent | License         |
-+=======================+==========+=========+========+=================+
-| `Soil Grids (ISRIC)`_ | Present  | 250 m   | Global | `CC by-SA 4.0`_ |
-+-----------------------+----------+---------+--------+-----------------+
+1. Select the **Rasters** option from the list of options on the admin panel 
 
-.. _Soil Grids (ISRIC): https://www.soilgrids.org/
-.. _CC by-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
-.. _JPL public: https://www.jpl.nasa.gov/imagepolicy/
+.. figure:: ../_static/Images/LC7.png
+    :width: 598
+    :align: center
+    :height: 652
+    :alt: admin panel
+    :figclass: align-center
 
-Agroecological Zones
---------------------
+    Rasters option on admin panel
 
-+---------------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                                    | Temporal | Spatial | Extent | License          |
-+===================================================+==========+=========+========+==================+
-| `FAO - IIASA Global Agroecological Zones (GAEZ)`_ | 2000     | 8 km    | Global | `Public Domain`_ |
-+---------------------------------------------------+----------+---------+--------+------------------+
+2  From the *FILTER* options, *By raster type* select **LULC: Land use/land Cover** option to view the list of Land cover datasets that are already availabel on the database
 
-.. _FAO - IIASA Global Agroecological Zones (GAEZ): http://www.fao.org/nr/gaez/en
+.. figure:: ../_static/Images/LC8.png
+    :width: 435
+    :align: center
+    :height: 550
+    :alt: Fitering to view availabel datasets
+    :figclass: align-center
 
+    Selecting Land cover option from the list of filters
 
-Soil Quality
-------------
-+---------------------------+----------+---------+--------+---------------------+
-| Sensor/Dataset            | Temporal | Spatial | Extent | License             |
-+===========================+==========+=========+========+=====================+
-| `Soil Texture and Depth`_ | Present  | 250 m   | Global | `CC by-SA 4.0`_     |
-+---------------------------+----------+---------+--------+---------------------+
-| `Parent Material`_        | Present  | N/A     | Global | `CC by-SA 4.0`_     |
-+---------------------------+----------+---------+--------+---------------------+
-| `Slope`_                  | Present  | 30 m    | Global  | `JPL public`_      |
-+---------------------------+----------+---------+--------+---------------------+
+3.  Once you have confirmed that the raster you wish to add is not in the database. Select the **ADD RASTER** option from the top-right conner of the admin panel.
 
-.. _Soil Texture and Depth: https://cmr.earthdata.nasa.gov/search/concepts/C1000000240-LPDAAC_ECS.html
-.. _Parent Material: https://doi.pangaea.de/10.1594/PANGAEA.788537
-.. _Slope: https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02
+.. figure:: ../_static/Images/LC9.png
+    :width: 425
+    :align: center
+    :height: 301
+    :alt: add raster
+    :figclass: align-center
 
-Climate
--------
+    Selecting 'ADD RASTER' option
 
-+---------------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                                    | Temporal | Spatial | Extent | License          |
-+===================================================+==========+=========+========+==================+
-| `Terra Climate`_                                  | 1985-2019| 30 m    | Global | `Public Domain`_ |
-+---------------------------------------------------+----------+---------+--------+------------------+
+4.  On the add raster form that opens up, fill in the *Name* of the Land cover raster you with to add, then select the *Raster Year* and the *Raster Type* as shown below:
 
-.. _Terra Climate: https://developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE#description
+.. figure:: ../_static/Images/LC10.png
+    :width: 738
+    :align: center
+    :height: 588
+    :alt: add raster form
+    :figclass: align-center
 
-
-Administrative Boundaries
--------------------------
-
-+--------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                             | Temporal | Spatial | Extent | License          |
-+============================================+==========+=========+========+==================+
-| `Natural Earth Administrative Boundaries`_ | Present  | 10/50m  | Global | `Public Domain`_ |
-+--------------------------------------------+----------+---------+--------+------------------+
+    Filling the ADD RASTER form for land cover data upload
 
 .. note::
-    The `Natural Earth Administrative Boundaries`_ provided in MISLAND-North Africa 
-    are in the `public domain`_. The boundaries and names used, and the 
-    designations used, in MISLAND-North Africa do not imply official endorsement or 
-    acceptance by Conservation International Foundation, or by its partner 
-    organizations and contributors.
 
-    If using MISLAND-North Africa for official purposes, it is recommended that users 
-    choose an official boundary provided by the designated office of their 
-    country.
-
-.. _Natural Earth Administrative Boundaries: http://www.naturalearthdata.com
-
-.. _Public Domain: https://creativecommons.org/publicdomain/zero/1.0
+   It is recomended that you include the Year of the raster in the *Name* field as shown and that you associate the Land cover raster with the **LULC: Land use/land cover** *Raster Type* for the system to work properly and point to the right raster dataset. 
