@@ -27,7 +27,13 @@ The core-service provides land degradation indicators for six North African Coun
 
 .. toctree::
    :maxdepth: 3
-   :caption: Data and Data Sources
+   :caption: MISLAND System Admin
+   
+   /Introduction/admin
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Data Preparation
    
    /Introduction/data
 

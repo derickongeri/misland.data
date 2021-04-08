@@ -2,158 +2,110 @@
 Management Qulity Index
 =========================
 
-MISLAND-North Africa draws on a number of data sources. The data sets listed below are 
-owned/made available by the following organizations and individuals under 
-separate terms as indicated in their respective metadata.
+1. Open the downloaded country population density data on Qgis as shown in the figure so as to merge them 
 
-NDVI
-----
+.. figure:: ../_static/Images/mqi1.png
+    :width: 721
+    :align: center
+    :height: 400
+    :alt: Opening Land cover and population data on Qgis
+    :figclass: align-center
 
-+------------------+-----------+---------+--------+------------------+
-| Sensor/Dataset   | Temporal  | Spatial | Extent | License          |
-+==================+===========+=========+========+==================+
-| `LANDSAT7`_      | 2001-2020 | 30 m    | Global | `Public Domain`_ |
-+------------------+-----------+---------+--------+------------------+
-| `MOD13Q1-coll6`_ | 2001-2016 | 250 m   | Global | `Public Domain`_ |
-+------------------+-----------+---------+--------+------------------+
+    Opening Land cover and population data on Qgis
 
-.. _LANDSAT7: https://developers.google.com/earth-engine/datasets/catalog/landsat
-.. _AVHRR/GIMMS: https://glam1.gsfc.nasa.gov
-.. _MOD13Q1-coll6:
-   https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod13q1_v006
-   
-Soil moisture
--------------
+2. On the Qgis Menu-bar, navigate to *Raster>Miscelleneous>Merge* as shown below:
 
-+----------------+-----------+---------------+--------+------------------+
-| Sensor/Dataset | Temporal  | Spatial       | Extent | License          |
-+================+===========+===============+========+==================+
-| `MERRA 2`_     | 1980-2016 | 0.5° x 0.625° | Global | `Public Domain`_ |
-+----------------+-----------+---------------+--------+------------------+
-| `ERA I`_       | 1979-2016 | 0.75° x 0.75° | Global | `Public Domain`_ |
-+----------------+-----------+---------------+--------+------------------+
+.. figure:: ../_static/Images/mqi2.png
+    :width: 594
+    :align: center
+    :height: 411
+    :alt: Merging the population dataset
+    :figclass: align-center
 
-.. _MERRA 2: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-Land
-.. _ERA I: 
-   https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-interim-land
+    Merging Population Dataset
 
-Precipitation
--------------
+3. On the dialog that pops-up, click on the *Input Layer* selection option and choose *Select All*
 
-+----------------------+-----------+-------------+---------+------------------+
-| Sensor/Dataset       | Temporal  | Spatial     | Extent  | License          |
-+======================+===========+=============+=========+==================+
-| `GPCP v2.3 1 month`_ | 1979-2019 | 2.5° x 2.5° | Global  | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `GPCC V6`_           | 1891-2019 | 1° x 1°     | Global  | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `CHIRPS`_            | 1981-2016 | 5 km        | 50N-50S | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `PERSIANN-CDR`_      | 1983-2015 | 25 km       | 60N-60S | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
+.. figure:: ../_static/Images/mqi3a.png
+    :width: 883
+    :align: center
+    :height: 691
+    :alt: Selecting population datasets to merge
+    :figclass: align-center
 
-.. _GPCP v2.3 1 month: https://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html
-.. _GPCC V6: https://www.esrl.noaa.gov/psd/data/gridded/data.gpcc.html
-.. _CHIRPS:  http://chg.geog.ucsb.edu/data/chirps
-.. _PERSIANN-CDR: http://chrsdata.eng.uci.edu
+    Merge layers dialog
 
-Evapotranspiration
--------------------
+.. figure:: ../_static/Images/mqi3.png
+    :width: 883
+    :align: center
+    :height: 691
+    :alt: Selecting population datasets to merge
+    :figclass: align-center
 
-+----------------+-----------+---------+--------+------------------+
-| Sensor/Dataset | Temporal  | Spatial | Extent | License          |
-+================+===========+=========+========+==================+
-| MOD16A2_       | 2000-2014 | 1 km    | Global | `Public Domain`_ |
-+----------------+-----------+---------+--------+------------------+
+    Selecting population datasets to merge
 
-.. _MOD16A2:
-   https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod16a2_v006
+Save the merged layer to your desired location.
 
-Land cover
------------
+4. With the output from step 3 above loaded onto Qgis, Load the landcover data for the same year as the population data
+.. figure:: ../_static/Images/mqi4.png
+    :width: 710
+    :align: center
+    :height: 400
+    :alt: Loading the Landcover data on Qgis
+    :figclass: align-center
 
-+-----------------------+-----------+---------+--------+-----------------+
-| Sensor/Dataset        | Temporal  | Spatial | Extent | License         |
-+=======================+===========+=========+========+=================+
-| `ESA CCI Land Cover`_ | 1992-2018 | 300 m   | Global | `CC by-SA 3.0`_ |
-+-----------------------+-----------+---------+--------+-----------------+
+    Load the Landcover data on Qgis
 
-.. _ESA CCI Land Cover: https://www.esa-landcover-cci.org
-.. _CC by-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/igo
+5. Once the layers are loaded on to Qgis, open the processing toolbox and search for 'Management Quality Index' in the search bar. The management quality index model shoul show up under your the **Models** section as shown. Click on the Model to open it.
 
-Soil carbon
------------
+.. figure:: ../_static/Images/mqi5.png
+    :width: 411
+    :align: center
+    :height: 340
+    :alt: Management Quality Index Model
+    :figclass: align-center
 
-+-----------------------+----------+---------+--------+-----------------+
-| Sensor/Dataset        | Temporal | Spatial | Extent | License         |
-+=======================+==========+=========+========+=================+
-| `Soil Grids (ISRIC)`_ | Present  | 250 m   | Global | `CC by-SA 4.0`_ |
-+-----------------------+----------+---------+--------+-----------------+
+    Accessing the MQI model from the processing toolbox
 
-.. _Soil Grids (ISRIC): https://www.soilgrids.org/
-.. _CC by-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
-.. _JPL public: https://www.jpl.nasa.gov/imagepolicy/
+6. Select the Landcover and Population dataset as your model inputs on the dialog that pops up as shown below:
 
-Agroecological Zones
---------------------
+.. figure:: ../_static/Images/mqi6.png
+    :width: 765
+    :align: center
+    :height: 621
+    :alt: MQI Dialog
+    :figclass: align-center
 
-+---------------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                                    | Temporal | Spatial | Extent | License          |
-+===================================================+==========+=========+========+==================+
-| `FAO - IIASA Global Agroecological Zones (GAEZ)`_ | 2000     | 8 km    | Global | `Public Domain`_ |
-+---------------------------------------------------+----------+---------+--------+------------------+
+    Selecting Imput parameters for the MQI model
 
-.. _FAO - IIASA Global Agroecological Zones (GAEZ): http://www.fao.org/nr/gaez/en
+7. 
+.. figure:: ../_static/Images/mqi7.png
+    :width: 883
+    :align: center
+    :height: 691
+    :alt: Selecting population datasets to merge
+    :figclass: align-center
 
+    Management Quality Index Model summary
 
-Soil Quality
-------------
-+---------------------------+----------+---------+--------+---------------------+
-| Sensor/Dataset            | Temporal | Spatial | Extent | License             |
-+===========================+==========+=========+========+=====================+
-| `Soil Texture and Depth`_ | Present  | 250 m   | Global | `CC by-SA 4.0`_     |
-+---------------------------+----------+---------+--------+---------------------+
-| `Parent Material`_        | Present  | N/A     | Global | `CC by-SA 4.0`_     |
-+---------------------------+----------+---------+--------+---------------------+
-| `Slope`_                  | Present  | 30 m    | Global  | `JPL public`_      |
-+---------------------------+----------+---------+--------+---------------------+
+.. figure:: ../_static/Images/mqi8.png
+    :width: 715
+    :align: center
+    :height: 400
+    :alt: MQI model outputs
+    :figclass: align-center
 
-.. _Soil Texture and Depth: https://cmr.earthdata.nasa.gov/search/concepts/C1000000240-LPDAAC_ECS.html
-.. _Parent Material: https://doi.pangaea.de/10.1594/PANGAEA.788537
-.. _Slope: https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02
+    Management Quality Index model outputs
 
-Climate
--------
+.. figure:: ../_static/Images/mqi9.png
+    :width: 838
+    :align: center
+    :height: 633
+    :alt: Saving the Outputs
+    :figclass: align-center
 
-+---------------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                                    | Temporal | Spatial | Extent | License          |
-+===================================================+==========+=========+========+==================+
-| `Terra Climate`_                                  | 1985-2019| 30 m    | Global | `Public Domain`_ |
-+---------------------------------------------------+----------+---------+--------+------------------+
-
-.. _Terra Climate: https://developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE#description
+    Saving the Outputs of the MQI model
 
 
-Administrative Boundaries
--------------------------
 
-+--------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                             | Temporal | Spatial | Extent | License          |
-+============================================+==========+=========+========+==================+
-| `Natural Earth Administrative Boundaries`_ | Present  | 10/50m  | Global | `Public Domain`_ |
-+--------------------------------------------+----------+---------+--------+------------------+
 
-.. note::
-    The `Natural Earth Administrative Boundaries`_ provided in MISLAND-North Africa 
-    are in the `public domain`_. The boundaries and names used, and the 
-    designations used, in MISLAND-North Africa do not imply official endorsement or 
-    acceptance by Conservation International Foundation, or by its partner 
-    organizations and contributors.
-
-    If using MISLAND-North Africa for official purposes, it is recommended that users 
-    choose an official boundary provided by the designated office of their 
-    country.
-
-.. _Natural Earth Administrative Boundaries: http://www.naturalearthdata.com
-
-.. _Public Domain: https://creativecommons.org/publicdomain/zero/1.0

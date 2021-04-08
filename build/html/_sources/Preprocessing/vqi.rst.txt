@@ -2,158 +2,118 @@
 Vegetation Qulality Index
 ===========================
 
-MISLAND-North Africa draws on a number of data sources. The data sets listed below are 
-owned/made available by the following organizations and individuals under 
-separate terms as indicated in their respective metadata.
+Vegetation plays a key role in preventing desertification by providing shelter against wind and water erosion. Plant cover promotes infiltration of water and reduces runoff, residual plant materials from senescent vegetation enriches the soil with organic matter which improves its structure and cohesion . The preliminary classification and the assigned scores of the vegetation characteristics is as summarized in the table below:
 
-NDVI
-----
-
-+------------------+-----------+---------+--------+------------------+
-| Sensor/Dataset   | Temporal  | Spatial | Extent | License          |
-+==================+===========+=========+========+==================+
-| `LANDSAT7`_      | 2001-2020 | 30 m    | Global | `Public Domain`_ |
-+------------------+-----------+---------+--------+------------------+
-| `MOD13Q1-coll6`_ | 2001-2016 | 250 m   | Global | `Public Domain`_ |
-+------------------+-----------+---------+--------+------------------+
-
-.. _LANDSAT7: https://developers.google.com/earth-engine/datasets/catalog/landsat
-.. _AVHRR/GIMMS: https://glam1.gsfc.nasa.gov
-.. _MOD13Q1-coll6:
-   https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod13q1_v006
-   
-Soil moisture
--------------
-
-+----------------+-----------+---------------+--------+------------------+
-| Sensor/Dataset | Temporal  | Spatial       | Extent | License          |
-+================+===========+===============+========+==================+
-| `MERRA 2`_     | 1980-2016 | 0.5° x 0.625° | Global | `Public Domain`_ |
-+----------------+-----------+---------------+--------+------------------+
-| `ERA I`_       | 1979-2016 | 0.75° x 0.75° | Global | `Public Domain`_ |
-+----------------+-----------+---------------+--------+------------------+
-
-.. _MERRA 2: https://gmao.gsfc.nasa.gov/reanalysis/MERRA-Land
-.. _ERA I: 
-   https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-interim-land
-
-Precipitation
--------------
-
-+----------------------+-----------+-------------+---------+------------------+
-| Sensor/Dataset       | Temporal  | Spatial     | Extent  | License          |
-+======================+===========+=============+=========+==================+
-| `GPCP v2.3 1 month`_ | 1979-2019 | 2.5° x 2.5° | Global  | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `GPCC V6`_           | 1891-2019 | 1° x 1°     | Global  | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `CHIRPS`_            | 1981-2016 | 5 km        | 50N-50S | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-| `PERSIANN-CDR`_      | 1983-2015 | 25 km       | 60N-60S | `Public Domain`_ |
-+----------------------+-----------+-------------+---------+------------------+
-
-.. _GPCP v2.3 1 month: https://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html
-.. _GPCC V6: https://www.esrl.noaa.gov/psd/data/gridded/data.gpcc.html
-.. _CHIRPS:  http://chg.geog.ucsb.edu/data/chirps
-.. _PERSIANN-CDR: http://chrsdata.eng.uci.edu
-
-Evapotranspiration
--------------------
-
-+----------------+-----------+---------+--------+------------------+
-| Sensor/Dataset | Temporal  | Spatial | Extent | License          |
-+================+===========+=========+========+==================+
-| MOD16A2_       | 2000-2014 | 1 km    | Global | `Public Domain`_ |
-+----------------+-----------+---------+--------+------------------+
-
-.. _MOD16A2:
-   https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod16a2_v006
-
-Land cover
------------
-
-+-----------------------+-----------+---------+--------+-----------------+
-| Sensor/Dataset        | Temporal  | Spatial | Extent | License         |
-+=======================+===========+=========+========+=================+
-| `ESA CCI Land Cover`_ | 1992-2018 | 300 m   | Global | `CC by-SA 3.0`_ |
-+-----------------------+-----------+---------+--------+-----------------+
++--------------------------+--------------+---------+--------+-----------------+
+| Sensor/Dataset           | Temporal     | Spatial | Extent | License         |
++==========================+==============+=========+========+=================+
+| `ESA CCI Land Cover`_    | 1992-2018    | 300 m   | Global | `CC by-SA 3.0`_ |
++--------------------------+--------------+---------+--------+-----------------+
+| `PROBAV NDVI`_           | 2013-present | 100 m   | Global | `Public Domain` |
++--------------------------+--------------+---------+--------+-----------------+
 
 .. _ESA CCI Land Cover: https://www.esa-landcover-cci.org
 .. _CC by-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/igo
 
-Soil carbon
------------
-
-+-----------------------+----------+---------+--------+-----------------+
-| Sensor/Dataset        | Temporal | Spatial | Extent | License         |
-+=======================+==========+=========+========+=================+
-| `Soil Grids (ISRIC)`_ | Present  | 250 m   | Global | `CC by-SA 4.0`_ |
-+-----------------------+----------+---------+--------+-----------------+
-
-.. _Soil Grids (ISRIC): https://www.soilgrids.org/
-.. _CC by-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
-.. _JPL public: https://www.jpl.nasa.gov/imagepolicy/
-
-Agroecological Zones
---------------------
-
-+---------------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                                    | Temporal | Spatial | Extent | License          |
-+===================================================+==========+=========+========+==================+
-| `FAO - IIASA Global Agroecological Zones (GAEZ)`_ | 2000     | 8 km    | Global | `Public Domain`_ |
-+---------------------------------------------------+----------+---------+--------+------------------+
-
-.. _FAO - IIASA Global Agroecological Zones (GAEZ): http://www.fao.org/nr/gaez/en
+.. _PROBAV NDVI: https://developers.google.com/earth-engine/datasets/catalog/VITO_PROBAV_C1_S1_TOC_100M
+.. _Copyright ESA-BELSPO, produced by Vito
 
 
-Soil Quality
-------------
-+---------------------------+----------+---------+--------+---------------------+
-| Sensor/Dataset            | Temporal | Spatial | Extent | License             |
-+===========================+==========+=========+========+=====================+
-| `Soil Texture and Depth`_ | Present  | 250 m   | Global | `CC by-SA 4.0`_     |
-+---------------------------+----------+---------+--------+---------------------+
-| `Parent Material`_        | Present  | N/A     | Global | `CC by-SA 4.0`_     |
-+---------------------------+----------+---------+--------+---------------------+
-| `Slope`_                  | Present  | 30 m    | Global  | `JPL public`_      |
-+---------------------------+----------+---------+--------+---------------------+
+Preprocessing in Qgis
+----------------------
 
-.. _Soil Texture and Depth: https://cmr.earthdata.nasa.gov/search/concepts/C1000000240-LPDAAC_ECS.html
-.. _Parent Material: https://doi.pangaea.de/10.1594/PANGAEA.788537
-.. _Slope: https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02
+1. Open the cliped landcover data(all 36 classes) and the ProbaV maximum NDVI composite data on Qgis
 
-Climate
--------
+.. figure:: ../_static/Images/vqi3.png
+    :width: 650
+    :align: center
+    :height: 430
+    :alt: Open Landcover and NDVI 
+    :figclass: align-center
 
-+---------------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                                    | Temporal | Spatial | Extent | License          |
-+===================================================+==========+=========+========+==================+
-| `Terra Climate`_                                  | 1985-2019| 30 m    | Global | `Public Domain`_ |
-+---------------------------------------------------+----------+---------+--------+------------------+
+    Landcover data and NDVI data loaded to Qgis
 
-.. _Terra Climate: https://developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE#description
+2. Once the layers are loaded on to Qgis, open the processing toolbox and search for 'Vegetation Quality Index' in the search bar. The vegetatioon quality index model should show up under the **Models** section as shown. Click on the Model to open it.
 
+.. figure:: ../_static/Images/vqi3a.png
+    :width: 334
+    :align: center
+    :height: 221
+    :alt: Opening the VQI model
+    :figclass: align-center
 
-Administrative Boundaries
--------------------------
+    Vegetation Quality Index processing Model
 
-+--------------------------------------------+----------+---------+--------+------------------+
-| Sensor/Dataset                             | Temporal | Spatial | Extent | License          |
-+============================================+==========+=========+========+==================+
-| `Natural Earth Administrative Boundaries`_ | Present  | 10/50m  | Global | `Public Domain`_ |
-+--------------------------------------------+----------+---------+--------+------------------+
+3. On the Vegetation Quality Index dialog that pops up, select the loaded landcover and NDVI data as inputs and run the model
+
+.. figure:: ../_static/Images/vqi4.png
+    :width: 800
+    :align: center
+    :height: 600
+    :alt: VQI dialog
+    :figclass: align-center
+
+    Vegetation Qulity Index inputs
 
 .. note::
-    The `Natural Earth Administrative Boundaries`_ provided in MISLAND-North Africa 
-    are in the `public domain`_. The boundaries and names used, and the 
-    designations used, in MISLAND-North Africa do not imply official endorsement or 
-    acceptance by Conservation International Foundation, or by its partner 
-    organizations and contributors.
+   The vegetation Quality Index model Reclassifies the landcover and assigns scores to the landcover groups for the Fire Risk, Erosion Protection and the Drought resistance. The plant cover is derived from the Maximum NDVI composite as summarized in the graphical model below.
 
-    If using MISLAND-North Africa for official purposes, it is recommended that users 
-    choose an official boundary provided by the designated office of their 
-    country.
+   .. figure:: ../_static/Images/vqi4a.png
+    :width: 700
+    :align: center
+    :height: 400
+    :alt: VQI dialog
+    :figclass: align-center
 
-.. _Natural Earth Administrative Boundaries: http://www.naturalearthdata.com
+    Vegetation Qulity Index inputs
 
-.. _Public Domain: https://creativecommons.org/publicdomain/zero/1.0
+   The scores to the reclassified landcover outputs and plant cover scores are assigned according to the table below: *Ferrara*, *Agostino*, *et al*. "*Updating the MEDALUS‐ESA Framework for Worldwide Land Degradation and Desertification Assessment*." *Land Degradation & Development* 31.12 (2020): 1593-1607.
+
+   .. figure:: ../_static/Images/vqi1.png
+    :width: 800
+    :align: center
+    :height: 600
+    :alt: VQI dialog
+    :figclass: align-center
+
+    Vegetation Qulity Index inputs
+
+   .. figure:: ../_static/Images/vqi2.png
+    :width: 216
+    :align: center
+    :height: 182
+    :alt: VQI dialog
+    :figclass: align-center
+
+    Plant cover scores
+
+4. On running the model the ouputs for the elementary VQI variables should be loaded onto QGIS as temporary layers. Save the layers to your desired folder with the appropriate descriptive name.
+
+.. figure:: ../_static/Images/vqi5.png
+    :width: 800
+    :align: center
+    :height: 450
+    :alt: VQI outputs
+    :figclass: align-center
+
+    Vegetation Qulity Index model outputs
+
+.. note::
+   To save the layers with the appropriate dimensions, right click on the layer you want to save and navigate to *Export*>*Save as* and on the *Save as* dialog set the appropriate name and location for the output. Make sure to set the horizontal and vertical resolution option to 0.00277778 for all the outputs as shown below.
+
+.. figure:: ../_static/Images/vqi6.png
+    :width: 839
+    :align: center
+    :height: 657
+    :alt: VQI outputs
+    :figclass: align-center
+
+    Vegetation Qulity Index model outputs
+
+
+Data Upload to MISLAND service
+-------------------------------
+
+
+
+
