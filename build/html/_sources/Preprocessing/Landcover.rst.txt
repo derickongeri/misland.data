@@ -13,45 +13,70 @@ Data Preprocessing Steps
 ------------------------
 1. Unzip the C3S-LC-L4-LCCS-Map-300m-P1Y-yyyy-v2.1.1 data from the compressed format that it comes in after downloading. Closely examine the contents of this folder as it has various files.
 
-.. image:: ../_static/Images/LC1.png
-     :height: 400
-     :width: 610
-     :alt: LocateIT
+.. figure:: ../_static/Images/LC1.png
+    :width: 800
+    :align: center
+    :height: 400
+    :alt: admin panel
+    :figclass: align-center
+
+    Rasters option on admin panel
 
 2. Load the unzipped NetCDF4 raster onto qgis and select the lccs_class on the “Select Raster Layers to Add” dialog.
 
-.. image:: ../_static/Images/LC2.png
-     :height: 277
-     :width: 550
-     :alt: LocateIT
+.. figure:: ../_static/Images/LC2.png
+    :width: 800
+    :align: center
+    :height: 600
+    :alt: admin panel
+    :figclass: align-center
+
+    Extraction by mask
 
 3.  Once the raster layer is loaded add the vector layer of the OSS region and navigate to Raster > Extraction > Clip Raster by Mask Layer
 
-.. image:: ../_static/Images/LC3.png
-     :height: 277
-     :width: 550
-     :alt: LocateIT
+.. figure:: ../_static/Images/LC3.png
+    :width: 625
+    :align: center
+    :height: 287
+    :alt: admin panel
+    :figclass: align-center
+
+    Finding the r.reclass processing tool
 
 4.  Once the raster layer has been clipped to the area of interest, open the processing toolbox and search for r.reclass and select the GRASS>Raster>r.reclass  tool.
 
-.. image:: ../_static/Images/LC4.png
-     :height: 277
-     :width: 550
-     :alt: LocateIT
+.. figure:: ../_static/Images/LC4.png
+    :width: 863
+    :align: center
+    :height: 709
+    :alt: admin panel
+    :figclass: align-center
 
-5.  On the ”r.reclass” dialog that pops up, select the clipped land cover data as the input layer and paste the following reclassification rules into the “Reclass rules text box” and save the output in a desired location.
+    Finding the r.reclass processing tool
 
-.. image:: ../_static/Images/LC5.png
-     :height: 277
-     :width: 550
-     :alt: LocateIT
+5.  On the *r.reclass* dialog that pops up, select the clipped land cover data as the input layer and paste the following reclassification rules into the “Reclass rules text box” and save the output in a desired location.
+
+.. figure:: ../_static/Images/LC5.png
+    :width: 800
+    :align: center
+    :height: 700
+    :alt: admin panel
+    :figclass: align-center
+
+    Finding the r.reclass processing tool
 
 6.  Once the data is reclassified you can upload the QML style layer to visualize and validate the reclassified land cover data.
 
-.. image:: ../_static/Images/LC6.png
-     :height: 277
-     :width: 550
-     :alt: LocateIT
+.. figure:: ../_static/Images/LC6.png
+    :width: 800
+    :align: center
+    :height: 400
+    :alt: admin panel
+    :figclass: align-center
+
+    Finding the r.reclass processing tool
+
 
 Data Upload to MISLAND service
 -------------------------------
@@ -60,9 +85,9 @@ To upload the Land cover dataset to the admin panel. Follow these simple steps
 1. Select the **Rasters** option from the list of options on the admin panel 
 
 .. figure:: ../_static/Images/LC7.png
-    :width: 598
+    :width: 652
     :align: center
-    :height: 652
+    :height: 598
     :alt: admin panel
     :figclass: align-center
 
@@ -71,9 +96,9 @@ To upload the Land cover dataset to the admin panel. Follow these simple steps
 2  From the *FILTER* options, *By raster type* select **LULC: Land use/land Cover** option to view the list of Land cover datasets that are already availabel on the database
 
 .. figure:: ../_static/Images/LC8.png
-    :width: 435
+    :width: 550
     :align: center
-    :height: 550
+    :height: 435
     :alt: Fitering to view availabel datasets
     :figclass: align-center
 
@@ -103,4 +128,4 @@ To upload the Land cover dataset to the admin panel. Follow these simple steps
 
 .. note::
 
-   It is recomended that you include the Year of the raster in the *Name* field as shown and that you associate the Land cover raster with the **LULC: Land use/land cover** *Raster Type* for the system to work properly and point to the right raster dataset. 
+   It is recomended that you include the Year of the raster in the *Name* field as shown and that you associate the Land cover raster with the **LULC: Land use/land cover** *Raster Type*for the system to work properly and point to the right raster dataset. 

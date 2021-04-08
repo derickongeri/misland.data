@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Preparing the Ecological Units Layer &mdash; MISLAND DATA PREPARATION MANUAL 0.0.1 documentation</title>
+  <title>Ecological Units Layer &mdash; MISLAND DATA PREPARATION MANUAL 0.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data and Data sources" href="cqi.html" />
-    <link rel="prev" title="Data and Data sources" href="Forestloss.html" /> 
+    <link rel="next" title="Climate Quality Index" href="cqi.html" />
+    <link rel="prev" title="Forest Loss" href="Forestloss.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,6 +54,9 @@
             <a href="../index.html" class="icon icon-home" alt="Documentation Home"> MISLAND DATA PREPARATION MANUAL
           
 
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,7 +85,36 @@
               
             
             
-              <p class="caption"><span class="caption-text">Data and Data Sources</span></p>
+              <p class="caption"><span class="caption-text">MISLAND System Admin</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/admin.html">MISLAND System Admin Panel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#system-setting">System Setting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#guest-user-polygon-size-limit">Guest user polygon size limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#signed-up-user-polygon-size-limit">Signed up user polygon size limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#enable-user-account-activation">Enable user account activation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#email-urls-and-host-email-host-port-setup">Email, URLs and host email host port setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#enable-cache-limit">Enable Cache Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#backend-port">Backend port</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#scheduled-tasks">Scheduled Tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#uploading-and-manipulating-data-in-the-system">Uploading and Manipulating data in the system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#uploading-data-set">Uploading data set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#uploading-medalus-data">Uploading Medalus data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/admin.html#uploading-landsat-data">Uploading Landsat data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#adding-editing-question">Adding/editing Question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#modifying-gallery-items">Modifying Gallery Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#managing-custom-shapefile">Managing Custom shapefile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#computation-threshold">Computation Threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#managing-users">Managing Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#user-feedback">User Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/admin.html#google-analytics">Google analytics</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Data Preparation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data and Data sources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#ndvi">NDVI</a></li>
@@ -101,122 +133,34 @@
 <p class="caption"><span class="caption-text">Data Preprocessing in Qgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Landcover.html">Landcover Data Preparation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Landcover.html#administrative-boundaries">Administrative Boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Landcover.html#data-preprocessing-steps">Data Preprocessing Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Landcover.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="NDVI.html">Data and Data sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#administrative-boundaries">Administrative Boundaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NDVI.html">Vegetation Indices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NDVI.html#modis-ndvi">MODIS NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NDVI.html#landsat-derived-ndvi-msavi-savi">Landsat derived NDVI, MSAVI, SAVI</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="soc.html">Soil Organic Carbon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="soc.html#administrative-boundaries">Administrative Boundaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soc.html">Soil Organic Carbon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Forestloss.html">Forest Loss</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ecological Units Layer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#qgis-data-pre-processing-steps">QGIS Data pre-processing steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-the-ecological-units-to-misland-service">Uploading the Ecological Units to MISLAND Service</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Forestloss.html">Data and Data sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Forestloss.html#administrative-boundaries">Administrative Boundaries</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Preparing the Ecological Units Layer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#administrative-boundaries">Administrative Boundaries</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cqi.html">Data and Data sources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cqi.html#administrative-boundaries">Administrative Boundaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cqi.html">Climate Quality Index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cqi.html#aridity-index">Aridity Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cqi.html#rainfall">Rainfall</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="vqi.html">Vegetation Qulality Index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#administrative-boundaries">Administrative Boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqi.html#preprocessing-in-qgis">Preprocessing in Qgis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqi.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sqi.html">Soil Quality Index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sqi.html#administrative-boundaries">Administrative Boundaries</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="mqi.html">Management Qulity Index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#ndvi">NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#soil-moisture">Soil moisture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#precipitation">Precipitation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#evapotranspiration">Evapotranspiration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#land-cover">Land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#soil-carbon">Soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#agroecological-zones">Agroecological Zones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#soil-quality">Soil Quality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#climate">Climate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mqi.html#administrative-boundaries">Administrative Boundaries</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="sqi.html">Soil Quality Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mqi.html">Management Qulity Index</a></li>
 </ul>
 
             
@@ -263,7 +207,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Preparing the Ecological Units Layer</li>
+      <li>Ecological Units Layer</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -282,341 +226,64 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="preparing-the-ecological-units-layer">
-<h1>Preparing the Ecological Units Layer<a class="headerlink" href="#preparing-the-ecological-units-layer" title="Permalink to this headline">¶</a></h1>
-<p>MISLAND-North Africa draws on a number of data sources. The data sets listed below are
-owned/made available by the following organizations and individuals under
-separate terms as indicated in their respective metadata.</p>
-<div class="section" id="ndvi">
-<h2>NDVI<a class="headerlink" href="#ndvi" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 17%" />
-<col style="width: 14%" />
-<col style="width: 13%" />
-<col style="width: 28%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/landsat">LANDSAT7</a></p></td>
-<td><p>2001-2020</p></td>
-<td><p>30 m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod13q1_v006">MOD13Q1-coll6</a></p></td>
-<td><p>2001-2016</p></td>
-<td><p>250 m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="ecological-units-layer">
+<h1>Ecological Units Layer<a class="headerlink" href="#ecological-units-layer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="qgis-data-pre-processing-steps">
+<h2>QGIS Data pre-processing steps<a class="headerlink" href="#qgis-data-pre-processing-steps" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Open the land-cover and soil grids data on qgis</p></li>
+</ol>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../_images/ecounit1.png"><img alt="opening the data on qgis" src="../_images/ecounit1.png" style="width: 800px; height: 635px;" /></a>
+<p class="caption"><span class="caption-text">Loading the Landcover and Soil Grids on Qgis</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="soil-moisture">
-<h2>Soil moisture<a class="headerlink" href="#soil-moisture" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 16%" />
-<col style="width: 22%" />
-<col style="width: 12%" />
-<col style="width: 26%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://gmao.gsfc.nasa.gov/reanalysis/MERRA-Land">MERRA 2</a></p></td>
-<td><p>1980-2016</p></td>
-<td><p>0.5° x 0.625°</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era-interim-land">ERA I</a></p></td>
-<td><p>1979-2016</p></td>
-<td><p>0.75° x 0.75°</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
+<ol class="arabic simple" start="2">
+<li><p>On the processing tool box, search for the <em>EcologicalUnitsModel</em> which will appear under <strong>Models</strong>&gt;**Land Productivity Models**</p></li>
+</ol>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="../_images/ecounit2a.png"><img alt="Ecological unit model" src="../_images/ecounit2a.png" style="width: 361px; height: 279px;" /></a>
+<p class="caption"><span class="caption-text">Finding the Ecological Unit Model</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="precipitation">
-<h2>Precipitation<a class="headerlink" href="#precipitation" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 15%" />
-<col style="width: 18%" />
-<col style="width: 12%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://www.esrl.noaa.gov/psd/data/gridded/data.gpcp.html">GPCP v2.3 1 month</a></p></td>
-<td><p>1979-2019</p></td>
-<td><p>2.5° x 2.5°</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://www.esrl.noaa.gov/psd/data/gridded/data.gpcc.html">GPCC V6</a></p></td>
-<td><p>1891-2019</p></td>
-<td><p>1° x 1°</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference external" href="http://chg.geog.ucsb.edu/data/chirps">CHIRPS</a></p></td>
-<td><p>1981-2016</p></td>
-<td><p>5 km</p></td>
-<td><p>50N-50S</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="http://chrsdata.eng.uci.edu">PERSIANN-CDR</a></p></td>
-<td><p>1983-2015</p></td>
-<td><p>25 km</p></td>
-<td><p>60N-60S</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
+<ol class="arabic simple" start="3">
+<li><p>On the dialog that pops up, select the Landcover and the soil grid data as the input data and run the model</p></li>
+</ol>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="../_images/ecounit2.png"><img alt="Ecological Unit Model dialog" src="../_images/ecounit2.png" style="width: 709px; height: 580px;" /></a>
+<p class="caption"><span class="caption-text">Ecological Unit Model dialog</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="evapotranspiration">
-<h2>Evapotranspiration<a class="headerlink" href="#evapotranspiration" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 18%" />
-<col style="width: 15%" />
-<col style="width: 13%" />
-<col style="width: 29%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://lpdaac.usgs.gov/dataset_discovery/modis/modis_products_table/mod16a2_v006">MOD16A2</a></p></td>
-<td><p>2000-2014</p></td>
-<td><p>1 km</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="land-cover">
-<h2>Land cover<a class="headerlink" href="#land-cover" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 16%" />
-<col style="width: 13%" />
-<col style="width: 12%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://www.esa-landcover-cci.org">ESA CCI Land Cover</a></p></td>
-<td><p>1992-2018</p></td>
-<td><p>300 m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/3.0/igo">CC by-SA 3.0</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="soil-carbon">
-<h2>Soil carbon<a class="headerlink" href="#soil-carbon" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 15%" />
-<col style="width: 13%" />
-<col style="width: 12%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://www.soilgrids.org/">Soil Grids (ISRIC)</a></p></td>
-<td><p>Present</p></td>
-<td><p>250 m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC by-SA 4.0</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="agroecological-zones">
-<h2>Agroecological Zones<a class="headerlink" href="#agroecological-zones" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 10%" />
-<col style="width: 9%" />
-<col style="width: 8%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="http://www.fao.org/nr/gaez/en">FAO - IIASA Global Agroecological Zones (GAEZ)</a></p></td>
-<td><p>2000</p></td>
-<td><p>8 km</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="soil-quality">
-<h2>Soil Quality<a class="headerlink" href="#soil-quality" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 36%" />
-<col style="width: 13%" />
-<col style="width: 12%" />
-<col style="width: 11%" />
-<col style="width: 28%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://cmr.earthdata.nasa.gov/search/concepts/C1000000240-LPDAAC_ECS.html">Soil Texture and Depth</a></p></td>
-<td><p>Present</p></td>
-<td><p>250 m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC by-SA 4.0</a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://doi.pangaea.de/10.1594/PANGAEA.788537">Parent Material</a></p></td>
-<td><p>Present</p></td>
-<td><p>N/A</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0">CC by-SA 4.0</a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02">Slope</a></p></td>
-<td><p>Present</p></td>
-<td><p>30 m</p></td>
-<td colspan="2"><p>Global  | <a class="reference external" href="https://www.jpl.nasa.gov/imagepolicy/">JPL public</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="climate">
-<h2>Climate<a class="headerlink" href="#climate" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 10%" />
-<col style="width: 9%" />
-<col style="width: 8%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE#description">Terra Climate</a></p></td>
-<td><p>1985-2019</p></td>
-<td><p>30 m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="administrative-boundaries">
-<h2>Administrative Boundaries<a class="headerlink" href="#administrative-boundaries" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 49%" />
-<col style="width: 11%" />
-<col style="width: 10%" />
-<col style="width: 9%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/Dataset</p></th>
-<th class="head"><p>Temporal</p></th>
-<th class="head"><p>Spatial</p></th>
-<th class="head"><p>Extent</p></th>
-<th class="head"><p>License</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference external" href="http://www.naturalearthdata.com">Natural Earth Administrative Boundaries</a></p></td>
-<td><p>Present</p></td>
-<td><p>10/50m</p></td>
-<td><p>Global</p></td>
-<td><p><a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">Public Domain</a></p></td>
-</tr>
-</tbody>
-</table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <a class="reference external" href="http://www.naturalearthdata.com">Natural Earth Administrative Boundaries</a> provided in MISLAND-North Africa
-are in the <a class="reference external" href="https://creativecommons.org/publicdomain/zero/1.0">public domain</a>. The boundaries and names used, and the
-designations used, in MISLAND-North Africa do not imply official endorsement or
-acceptance by Conservation International Foundation, or by its partner
-organizations and contributors.</p>
-<p>If using MISLAND-North Africa for official purposes, it is recommended that users
-choose an official boundary provided by the designated office of their
-country.</p>
+<blockquote>
+<div><div class="align-center figure" id="id4">
+<a class="reference internal image-reference" href="../_images/ecounit3.png"><img alt="Ecological Unit Model" src="../_images/ecounit3.png" style="width: 743px; height: 242px;" /></a>
+<p class="caption"><span class="caption-text">Ecological Unit Model summary</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+<p>It is important that the dimenssions of the Landcover data and the soil grids data are matching. This can be checked by right clicking on the layer and navigating to <em>properties</em>&gt;*Information*.</p>
+<div class="align-center figure" id="id5">
+<a class="reference internal image-reference" href="../_images/ecounit4.png"><img alt="Dimensions" src="../_images/ecounit4.png" style="width: 754px; height: 592px;" /></a>
+<p class="caption"><span class="caption-text">Checking the dimenssions of the datasets</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>To match the dimensions of the two layers you can resample the soil grids to match the resolution of the Landcover data.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>On runing the model successfully the units layer will be loaded onto Qgis as shown below</p></li>
+</ol>
+<div class="align-center figure" id="id6">
+<a class="reference internal image-reference" href="../_images/ecounit3b.png"><img alt="Ecological Unit Model dialog" src="../_images/ecounit3b.png" style="width: 750px; height: 551px;" /></a>
+<p class="caption"><span class="caption-text">Ecological Unit Model output</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can save the output from the Model to your desired location with the appropriate name</p>
+<div class="align-center figure" id="id7">
+<a class="reference internal image-reference" href="../_images/ecounit5.png"><img alt="Ecological Unit Model dialog" src="../_images/ecounit5.png" style="width: 732px; height: 612px;" /></a>
+<p class="caption"><span class="caption-text">Saving the output</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="uploading-the-ecological-units-to-misland-service">
+<h2>Uploading the Ecological Units to MISLAND Service<a class="headerlink" href="#uploading-the-ecological-units-to-misland-service" title="Permalink to this headline">¶</a></h2>
+<div class="align-center figure" id="id8">
+<a class="reference internal image-reference" href="../_images/ecounit7.png"><img alt="Ecological unit data upload" src="../_images/ecounit7.png" style="width: 716px; height: 608px;" /></a>
+<p class="caption"><span class="caption-text">Data Upload Form</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -629,10 +296,10 @@ country.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cqi.html" class="btn btn-neutral float-right" title="Data and Data sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cqi.html" class="btn btn-neutral float-right" title="Climate Quality Index" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Forestloss.html" class="btn btn-neutral float-left" title="Data and Data sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Forestloss.html" class="btn btn-neutral float-left" title="Forest Loss" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

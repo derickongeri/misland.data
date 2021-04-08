@@ -34,14 +34,14 @@ Signed up user polygon size limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This limits the maximum size of an area a registered user can compute on the fly. Registered users have the option of scheduling processing tasks that use datasets that cover areas larger than the set polygon size limit. Tasks scheduling can be enabled/disabled by checking/unchecking the Enable tasks scheduling option.
 
-.. figure:: ../_static/Images/admin1.png
-    :width: 839
+.. figure:: ../_static/Images/admin3.png
+    :width: 744
     :align: center
-    :height: 657
-    :alt: VQI outputs
+    :height: 584
+    :alt: Guest polygon size limit
     :figclass: align-center
 
-    Vegetation Qulity Index model outputs
+    Guest Polygon Size limit
 
 Enable user account activation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,14 +52,14 @@ Email, URLs and host email host port setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 These options are crucial for connecting the backend to the frontend and are most likely to be setup only once during the initial system setup. Here you can set up the different emails required to ensure smooth working of the system. In addition to setting up the email urls, you can configure the raster clipping algorithm that is used when performing computation under Raster clipping algorithm option.
  
-.. figure:: ../_static/Images/admin1.png
-    :width: 839
+.. figure:: ../_static/Images/admin4a.png
+    :width: 667
     :align: center
-    :height: 657
-    :alt: VQI outputs
+    :height: 585
+    :alt: Email, URLs and host email host port setup
     :figclass: align-center
 
-    System Settings
+    Email, URLs and host email host port setup
 
 Enable Cache Limit
 ~~~~~~~~~~~~~~~~~~~
@@ -161,23 +161,14 @@ _________________________
 The Gallery option on the admin panel is used to Upload new images on the homepage of Misland. The system is designed in such a way that you do not need to delete old images, all you need to activate (check/uncheck is published) the image you want displayed, and deactivate outdated images. 
  
 .. figure:: ../_static/Images/admin12.png
-    :width: 663
+    :width: 741
     :align: center
-    :height: 287
-    :alt: Questions option
+    :height: 586
+    :alt: Gallery
     :figclass: align-center
 
-    Publishing Gallary Intems
+    Publishing Gallery Intems
  
-.. figure:: ../_static/Images/admin13.png
-    :width: 765
-    :align: center
-    :height: 562
-    :alt: Questions option
-    :figclass: align-center
-
-    Gallary
-
 Managing Custom shapefile
 ___________________________
 This option enables the system administrator to view and manage all the custom shapefiles (Shapefiles uploaded by individual users). 
@@ -198,7 +189,7 @@ The admin panel provides tools for managing registered system users. Using this 
     :alt: Questions option
     :figclass: align-center
 
-    Gallary
+    Gallery
 
 To modify the access rights of a particular system user, just click that user’s name on the system panel and implement the desired changes. After the modification, just click the save button and the changes will take effect.
 
@@ -214,11 +205,3 @@ The system uses google analytics to track user visits to this online service. So
 `Google Analytics Link`_
 
 .. _Google Analytics Link: https://analytics.google.com/analytics/web/?authuser=2#/report-home/a184032602w254258877p233620264
- 
-
-
-
-
-
-
-

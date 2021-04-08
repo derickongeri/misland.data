@@ -3,13 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MISLAND DATA PREPARATION DOCUMENTATION
-=======================================
+==================================================================
+MISLAND SYSTEM ADMINISTRATION AND DATA PREPARATION DOCUMENTATION
+==================================================================
 
-	.. image:: ../source/_static/Images/LDMS.png
-	   :height: 277
-	   :width: 550
-	   :alt: LocateIT
+.. figure:: _static/Images/intro1.png
+    :width: 800
+    :align: center
+    :height: 400
+    :alt: MISLAND homepage
+    :figclass: align-center
+
+    Misland Homepage
 
 MISLAND-North Africa is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
 
@@ -42,9 +47,6 @@ The core-service provides land degradation indicators for six North African Coun
    :caption: Data Preprocessing in Qgis
    
    /Preprocessing/Landcover
-   /Preprocessing/NDVI
-   /Preprocessing/MSAVI
-   /Preprocessing/soc
    /Preprocessing/Forestloss
    /Preprocessing/Ecologicalunits
    /Preprocessing/cqi
