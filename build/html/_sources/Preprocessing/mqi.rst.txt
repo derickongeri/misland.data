@@ -29,7 +29,7 @@ Management Qulity Index
 .. figure:: ../_static/Images/mqi3a.png
     :width: 883
     :align: center
-    :height: 691
+    :height: 500
     :alt: Selecting population datasets to merge
     :figclass: align-center
 
@@ -47,6 +47,7 @@ Management Qulity Index
 Save the merged layer to your desired location.
 
 4. With the output from step 3 above loaded onto Qgis, Load the landcover data for the same year as the population data
+
 .. figure:: ../_static/Images/mqi4.png
     :width: 710
     :align: center
@@ -78,15 +79,39 @@ Save the merged layer to your desired location.
 
     Selecting Imput parameters for the MQI model
 
-7. 
-.. figure:: ../_static/Images/mqi7.png
-    :width: 883
-    :align: center
-    :height: 691
-    :alt: Selecting population datasets to merge
-    :figclass: align-center
+.. note::
+   According to the major land use types for assessing the management quality degree of human induced stress, the land use intensity is obtained by defining the type of land use in a certain piece of land using the land cover. The population density was used as a proxy of human pressure on the environment: Ferrara, A*., Kosmas, C., Salvati, L., Padula, A., Mancino, G., & Nolè, A. (2020). Updating the MEDALUS‐ESA Framework for Worldwide Land Degradation and Desertification Assessment. *Land Degradation & Development*, 31(12), 1593-1607.
 
-    Management Quality Index Model summary
+   The simplified methodology is as represnted in the workflow below:
+
+    .. figure:: ../_static/Images/mqi7.png
+        :width: 856
+        :align: center
+        :height: 320
+        :alt: Selecting population datasets to merge
+        :figclass: align-center
+
+        Management Quality Index Model summary
+
+    .. figure:: ../_static/Images/mqi10.png
+        :width: 490
+        :align: center
+        :height: 520
+        :alt: Selecting population datasets to merge
+        :figclass: align-center
+
+        Land use intensity score
+
+    .. figure:: ../_static/Images/mqi11.png
+        :width: 242
+        :align: center
+        :height: 238
+        :alt: Population density score
+        :figclass: align-center
+        
+        Population density score
+
+6. Once the model is executed successfully the outputs will be loaded as temporary layers. You can save the layers with the desired name and set the horizontal and vertical resolution option to 0.0027778
 
 .. figure:: ../_static/Images/mqi8.png
     :width: 715
@@ -97,6 +122,7 @@ Save the merged layer to your desired location.
 
     Management Quality Index model outputs
 
+
 .. figure:: ../_static/Images/mqi9.png
     :width: 838
     :align: center
@@ -106,6 +132,5 @@ Save the merged layer to your desired location.
 
     Saving the Outputs of the MQI model
 
-
-
-
+Uploading the data to MISLAND Service
+_______________________________________

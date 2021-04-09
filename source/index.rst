@@ -28,7 +28,7 @@ The core-service provides land degradation indicators for six North African Coun
 
    You can download the `PDF Version of this doucument`_ here.
 
-   .. _PDF Version of this doucument: https://misland.readthedocs.io/_/downloads/en/master/pdf/
+   .. _PDF Version of this doucument: https://mislanddata.readthedocs.io/_/downloads/en/latest/pdf/
 
 .. toctree::
    :maxdepth: 3

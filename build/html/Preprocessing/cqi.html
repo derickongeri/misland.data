@@ -137,12 +137,6 @@
 <li class="toctree-l2"><a class="reference internal" href="Landcover.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="NDVI.html">Vegetation Indices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#modis-ndvi">MODIS NDVI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NDVI.html#landsat-derived-ndvi-msavi-savi">Landsat derived NDVI, MSAVI, SAVI</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="soc.html">Soil Organic Carbon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Forestloss.html">Forest Loss</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Ecologicalunits.html">Ecological Units Layer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Ecologicalunits.html#qgis-data-pre-processing-steps">QGIS Data pre-processing steps</a></li>
@@ -150,8 +144,9 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Climate Quality Index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#aridity-index">Aridity Index</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rainfall">Rainfall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-the-arididy-index-to-misland-service">Uploading the Arididy Index to MISLAND Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uploading-the-rainfall-data-to-misland-service">Uploading the Rainfall Data to MISLAND Service</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="vqi.html">Vegetation Qulality Index</a><ul>
@@ -228,11 +223,98 @@
             
   <div class="section" id="climate-quality-index">
 <h1>Climate Quality Index<a class="headerlink" href="#climate-quality-index" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="aridity-index">
-<h2>Aridity Index<a class="headerlink" href="#aridity-index" title="Permalink to this headline">¶</a></h2>
+<p>Climate quality is assessed on the basis of how it influences water availability to the plants. Consideration has been given to the amount of rainfall, air temperature and aridity. Climate layers and relative scores are reported in Table 3. In particular the selected layers are: Annual precipitation (a crucial parameter in plant growth); Bagnouls-Gaussen aridity index (a synthesis of precipitation, evapotranspiration and run-off information); Slope aspect (affects microclimatic conditions and erosion).</p>
+<div class="section" id="data-preprocessing-in-qgis">
+<h2>Data Preprocessing in Qgis<a class="headerlink" href="#data-preprocessing-in-qgis" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Open the downloaded Potential Evapotranspiration and Precipitation Datasets on Qgis.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The two datasets are in <strong>NetCDF</strong> (Network Common Data Form) - a file format for storing multidimensional scientific data (variables) such as temperature, humidity, pressure, wind speed, and direction. Each of these variables can be displayed through a dimension (such as time) by making a layer or table view from the netCDF file.
+When loading the precipitation data select the <strong>ppt</strong> option on the <em>Select Raster Layers to Add</em> dialog that pops up.</p>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../_images/cqi2a.png"><img alt="Loading the rainfall and PET data" src="../_images/cqi2a.png" style="width: 588px; height: 453px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the Precipitation data to add to Qgis</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="rainfall">
-<h2>Rainfall<a class="headerlink" href="#rainfall" title="Permalink to this headline">¶</a></h2>
+</div>
+<p>The loaded layers, alongside the OSS North Africa action zone shapefile should appear on the layers panel on Qgis as shown below</p>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="../_images/cqi2.png"><img alt="Loading the rainfall and PET data" src="../_images/cqi2.png" style="width: 700px; height: 450px;" /></a>
+<p class="caption"><span class="caption-text">Loading the PPT and PET NetCDF files to Qgis</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Clip the layers to the desires study area by navigating to <em>Raster</em>&gt;*Extraction*&gt;*Clip Raster by Mask Layer* option on the Qgis Menu bar.</p></li>
+</ol>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="../_images/cqi1a.png"><img alt="Clipping by Mask Layer" src="../_images/cqi1a.png" style="width: 526px; height: 338px;" /></a>
+<p class="caption"><span class="caption-text">Clipping by Mask Layer</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>On the dialoge that pops up select the inputs as shown and specify the <strong>Source CRS</strong> and <strong>target CRS</strong> options as shown below. Save the outputs to your desired location before running the tool.</p>
+<div class="align-center figure" id="id4">
+<a class="reference internal image-reference" href="../_images/cqi1.png"><img alt="Clipping by Mask Layer" src="../_images/cqi1.png" style="width: 782px; height: 650px;" /></a>
+<p class="caption"><span class="caption-text">Clipping by Mask Layer</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Once the layers are successfully cliped and saved, open the Processing toolbox and type “Climate Quality Index” and select the <em>Climate Quality Index</em> moded under <strong>Models</strong></p></li>
+</ol>
+<div class="align-center figure" id="id5">
+<a class="reference internal image-reference" href="../_images/cqi3.png"><img alt="Climate Quality Index model" src="../_images/cqi3.png" style="width: 409px; height: 281px;" /></a>
+<p class="caption"><span class="caption-text">Climate Quality Index model</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Select the proper inputs for the <em>Potential Evapotranspiration</em> and the <em>Precipitation</em></p>
+<div class="align-center figure" id="id6">
+<a class="reference internal image-reference" href="../_images/cqi4.png"><img alt="Climate Quality Index model" src="../_images/cqi4.png" style="width: 742px; height: 644px;" /></a>
+<p class="caption"><span class="caption-text">Defining Inputs for the CQI model</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The CQI Model yeilds the Precipitation Index by computing the total annual precipitation and reclassifying the values. The Aridity Index is computed as the ration of the Mean annual precipitation and the potential evapotranspiration using the simple Penman-Monteith formulae. The process is as summarized in the graphical representation of the model shown below.</p>
+<blockquote>
+<div><div class="align-center figure" id="id7">
+<a class="reference internal image-reference" href="../_images/cqi5.png"><img alt="Climate Quality Index model" src="../_images/cqi5.png" style="width: 800px; height: 300px;" /></a>
+<p class="caption"><span class="caption-text">CQI Model graphical model</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The classes for the precipitation and aridity index are obtained from: Ferrara, A*., Kosmas, C., Salvati, L., Padula, A., Mancino, G., &amp; Nolè, A. (2020). Updating the MEDALUS‐ESA Framework for Worldwide Land Degradation and Desertification Assessment. <em>Land Degradation &amp; Development</em>, 31(12), 1593-1607.</p>
+<div class="align-center figure" id="id8">
+<a class="reference internal image-reference" href="../_images/cqi9.png"><img alt="Climate Quality Index model" src="../_images/cqi9.png" style="width: 544px; height: 208px;" /></a>
+<p class="caption"><span class="caption-text">Aridity Index and Precipitaiton index scores</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Once the model has been executed successfully, The ouputs will be loaded onto Qgis. Right click on the temporary layer and navigate to the <em>Save as</em> option to to export the layers with the desired Name, CRS and dimensions as shown below;</p></li>
+</ol>
+<div class="align-center figure" id="id9">
+<a class="reference internal image-reference" href="../_images/cqi6.png"><img alt="Climate Quality Index model outputs" src="../_images/cqi6.png" style="width: 800px; height: 681px;" /></a>
+<p class="caption"><span class="caption-text">CQI Model graphical model outputs</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure" id="id10">
+<a class="reference internal image-reference" href="../_images/cqi7.png"><img alt="Climate Quality Index model" src="../_images/cqi7.png" style="width: 777px; height: 375px;" /></a>
+<p class="caption"><span class="caption-text">Saving the outputs</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On the horizontal and vertical resolution setings in the <em>Save as</em> dialog paset the value 0.0027778 for each of the outpus to give the layers a resolution 0f 300m to match other variables for computing the desertification indicators</p>
+<div class="align-center figure" id="id11">
+<a class="reference internal image-reference" href="../_images/cqi10.png"><img alt="Setting the resolution of the layers" src="../_images/cqi10.png" style="width: 695px; height: 609px;" /></a>
+<p class="caption"><span class="caption-text">Setting the resolution of the output layers layers</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="uploading-the-arididy-index-to-misland-service">
+<h2>Uploading the Arididy Index to MISLAND Service<a class="headerlink" href="#uploading-the-arididy-index-to-misland-service" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important that you give the Aridity Index layer a descriptive name and assocciate it with the correct year and raster category as shown below.</p>
+</div>
+<div class="align-center figure" id="id12">
+<a class="reference internal image-reference" href="../_images/cqi8.png"><img alt="Uploading the Aridity Index" src="../_images/cqi8.png" style="width: 663px; height: 544px;" /></a>
+<p class="caption"><span class="caption-text">Aridity index data upload</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="uploading-the-rainfall-data-to-misland-service">
+<h2>Uploading the Rainfall Data to MISLAND Service<a class="headerlink" href="#uploading-the-rainfall-data-to-misland-service" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
