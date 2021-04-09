@@ -19,7 +19,7 @@
 
 project = 'MISLAND DATA PREPARATION MANUAL'
 copyright = '2021, Derick Ongeri'
-author = 'Derick Ongeri,\n Simon Mekoki'
+author = 'LocateIT Kenya Limited'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
