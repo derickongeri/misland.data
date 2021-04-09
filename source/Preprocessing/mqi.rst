@@ -2,6 +2,9 @@
 Management Qulity Index
 =========================
 
+Data Preprocessing in Qgis
+_____________________________
+
 1. Open the downloaded country population density data on Qgis as shown in the figure so as to merge them 
 
 .. figure:: ../_static/Images/mqi1.png
