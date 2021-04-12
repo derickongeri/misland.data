@@ -46,6 +46,7 @@ The core-service provides land degradation indicators for six North African Coun
    :maxdepth: 3
    :caption: Data Preprocessing in Qgis
    
+   /Preprocessing/NDVI
    /Preprocessing/Landcover
    /Preprocessing/Forestloss
    /Preprocessing/Ecologicalunits

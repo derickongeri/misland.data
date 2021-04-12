@@ -104,7 +104,14 @@ ____________________________
 Upload to MISLAND Service
 _______________________________
 
+.. figure:: ../_static/Images/fr4.png
+    :width: 691
+    :align: center
+    :height: 608
+    :alt: saving the layer
+    :figclass: align-center
 
+    Saving the Forest Loss year data
 
 
 
