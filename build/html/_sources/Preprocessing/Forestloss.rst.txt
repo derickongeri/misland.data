@@ -63,7 +63,7 @@ ________________________________________
 Data Preprocessing in Qgis
 ____________________________
 
-4. Download the data form Google drive to your desired location on your local machine and load it to Qgis to view the outputs.
+1. Download the data form Google drive to your desired location on your local machine and load it to Qgis to view the outputs.
 
 .. figure:: ../_static/Images/fr1.png
     :width: 735
@@ -74,6 +74,8 @@ ____________________________
 
     Opening the Forestloss year data on Qgis
 
+2. On the Qgis menu-bar navigate to *Raster*>*Miscellaneous*>*Merge* to merge the downloaded tiles
+
 .. figure:: ../_static/Images/fr2.png
     :width: 735
     :align: center
@@ -83,6 +85,8 @@ ____________________________
 
     Merging the Forestloss year data
 
+3. On the Merge dialog, **Input layers** option choose the *Select All* option and click on ok.
+
 .. figure:: ../_static/Images/fr3.png
     :width: 742
     :align: center
@@ -91,27 +95,33 @@ ____________________________
     :figclass: align-center
 
     Selecting All layers to merge
+save the output to a temporary layer so as to export it with desired properties in the next step.
 
-.. figure:: ../_static/Images/fr4.png
-    :width: 691
-    :align: center
-    :height: 608
-    :alt: saving the layer
-    :figclass: align-center
+4. Right click on the layer and navigate to *Export*>*Save as* option and save the layer to your desired location with the appropriate name.
 
-    Saving the Forest Loss year data
+.. note::
+   The forest loss by year raster has values ranging from 1-20. The values represent the loss year form 2001 to 2020 hence to set the "nodata" value to 0 on the *Save Raster Layer as* dialog, check the **No data values** and input the values as shown in the figure below:
+
+	.. figure:: ../_static/Images/fr4.png
+	    :width: 691
+	    :align: center
+	    :height: 608
+	    :alt: saving the layer
+	    :figclass: align-center
+
+	    Saving the Forest Loss year data
 
 Upload to MISLAND Service
 _______________________________
 
-.. figure:: ../_static/Images/fr4.png
+.. figure:: ../_static/Images/fr5.png
     :width: 691
     :align: center
     :height: 608
     :alt: saving the layer
     :figclass: align-center
 
-    Saving the Forest Loss year data
+    Uploading the data to MISLAND service
 
 
 

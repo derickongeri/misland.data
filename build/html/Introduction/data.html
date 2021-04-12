@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Landcover Data Preparation" href="../Preprocessing/Landcover.html" />
+    <link rel="next" title="Vegetation Indices" href="../Preprocessing/NDVI.html" />
     <link rel="prev" title="MISLAND System Admin Panel" href="admin.html" /> 
 </head>
 
@@ -132,6 +132,17 @@
 </ul>
 <p class="caption"><span class="caption-text">Data Preprocessing in Qgis</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Preprocessing/NDVI.html">Vegetation Indices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/NDVI.html#modis-ndvi">MODIS NDVI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Preprocessing/NDVI.html#data-download-from-google-earth-engine">Data download from Google Earth Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/NDVI.html#landsat-derived-ndvi-msavi-savi">Landsat derived NDVI, MSAVI, SAVI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Preprocessing/NDVI.html#id1">Data download from Google Earth Engine</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Preprocessing/Landcover.html">Landcover Data Preparation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Landcover.html#data-preprocessing-steps">Data Preprocessing Steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Landcover.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
@@ -139,6 +150,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Preprocessing/Forestloss.html">Forest Loss</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Forestloss.html#data-preprocessing-and-download-on-gee">Data Preprocessing and Download on GEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Forestloss.html#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Forestloss.html#upload-to-misland-service">Upload to MISLAND Service</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Preprocessing/Ecologicalunits.html">Ecological Units Layer</a><ul>
@@ -153,6 +166,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Preprocessing/vqi.html">Vegetation Qulality Index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/vqi.html#compute-and-download-probav-maxndvi-form-google-earth-engine">Compute and download PROBAV maxNDVI form Google Earth Engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Preprocessing/vqi.html#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Preprocessing/vqi.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
@@ -575,7 +589,7 @@ country.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Preprocessing/Landcover.html" class="btn btn-neutral float-right" title="Landcover Data Preparation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Preprocessing/NDVI.html" class="btn btn-neutral float-right" title="Vegetation Indices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="admin.html" class="btn btn-neutral float-left" title="MISLAND System Admin Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -588,7 +602,7 @@ country.</p>
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2021, Derick Ongeri
+        &copy; Copyright 2021, Observatoire Du Sahara Et Du Sahel(OSS)
       <span class="lastupdated">
         Last updated on True.
       </span>

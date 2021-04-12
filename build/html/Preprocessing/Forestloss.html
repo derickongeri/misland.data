@@ -166,6 +166,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="vqi.html">Vegetation Qulality Index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vqi.html#compute-and-download-probav-maxndvi-form-google-earth-engine">Compute and download PROBAV maxNDVI form Google Earth Engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vqi.html#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vqi.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
@@ -330,31 +331,47 @@
 </div>
 <div class="section" id="data-preprocessing-in-qgis">
 <h2>Data Preprocessing in Qgis<a class="headerlink" href="#data-preprocessing-in-qgis" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple">
 <li><p>Download the data form Google drive to your desired location on your local machine and load it to Qgis to view the outputs.</p></li>
 </ol>
 <div class="align-center figure" id="id1">
 <a class="reference internal image-reference" href="../_images/fr1.png"><img alt="Opening the Forestloss data on Qgis" src="../_images/fr1.png" style="width: 735px; height: 415px;" /></a>
 <p class="caption"><span class="caption-text">Opening the Forestloss year data on Qgis</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+<ol class="arabic simple" start="2">
+<li><p>On the Qgis menu-bar navigate to <em>Raster</em>&gt;*Miscellaneous*&gt;*Merge* to merge the downloaded tiles</p></li>
+</ol>
 <div class="align-center figure" id="id2">
 <a class="reference internal image-reference" href="../_images/fr2.png"><img alt="Merging" src="../_images/fr2.png" style="width: 735px; height: 415px;" /></a>
 <p class="caption"><span class="caption-text">Merging the Forestloss year data</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
+<ol class="arabic simple" start="3">
+<li><p>On the Merge dialog, <strong>Input layers</strong> option choose the <em>Select All</em> option and click on ok.</p></li>
+</ol>
 <div class="align-center figure" id="id3">
 <a class="reference internal image-reference" href="../_images/fr3.png"><img alt="Select All layers" src="../_images/fr3.png" style="width: 742px; height: 642px;" /></a>
 <p class="caption"><span class="caption-text">Selecting All layers to merge</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<div class="align-center figure" id="id4">
+<p>save the output to a temporary layer so as to export it with desired properties in the next step.</p>
+<ol class="arabic simple" start="4">
+<li><p>Right click on the layer and navigate to <em>Export</em>&gt;*Save as* option and save the layer to your desired location with the appropriate name.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The forest loss by year raster has values ranging from 1-20. The values represent the loss year form 2001 to 2020 hence to set the “nodata” value to 0 on the <em>Save Raster Layer as</em> dialog, check the <strong>No data values</strong> and input the values as shown in the figure below:</p>
+<blockquote>
+<div><div class="align-center figure" id="id4">
 <a class="reference internal image-reference" href="../_images/fr4.png"><img alt="saving the layer" src="../_images/fr4.png" style="width: 691px; height: 608px;" /></a>
 <p class="caption"><span class="caption-text">Saving the Forest Loss year data</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="upload-to-misland-service">
 <h2>Upload to MISLAND Service<a class="headerlink" href="#upload-to-misland-service" title="Permalink to this headline">¶</a></h2>
 <div class="align-center figure" id="id5">
-<a class="reference internal image-reference" href="../_images/fr4.png"><img alt="saving the layer" src="../_images/fr4.png" style="width: 691px; height: 608px;" /></a>
-<p class="caption"><span class="caption-text">Saving the Forest Loss year data</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/fr5.png"><img alt="saving the layer" src="../_images/fr5.png" style="width: 691px; height: 608px;" /></a>
+<p class="caption"><span class="caption-text">Uploading the data to MISLAND service</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -380,7 +397,7 @@
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2021, Derick Ongeri
+        &copy; Copyright 2021, Observatoire Du Sahara Et Du Sahel(OSS)
       <span class="lastupdated">
         Last updated on True.
       </span>
