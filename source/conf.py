@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MISLAND DATA PREPARATION MANUAL'
-copyright = '2021, Derick Ongeri'
-author = 'LocateIT Kenya Limited, \n Observatoire Du Sahara Et Du Sahel(OSS)'
+copyright = '2021, Observatoire Du Sahara Et Du Sahel(OSS)'
+author = 'LocateIT Kenya Limited'+'\n'+'Observatoire Du Sahara Et Du Sahel(OSS)'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
