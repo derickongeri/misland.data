@@ -1,4 +1,36 @@
 ============
 Forest Loss 
 ============
+The High-resolution global forset change results from time-series analysis of Landsat images in characterizing global forest extent and change.
 
+The 'first' and 'last' bands are reference multispectral imagery from the first and last available years for Landsat spectral bands 3, 4, 5, and 7. Reference composite imagery represents median observations from a set of quality-assessed growing-season observations for each of these bands.
+
+MISLAND North Africal uses the Hansen Global Forest Change v1.8 to asses forest loss in the North Africa action zone. For more details of the Hansen Global Forest Change see the `user notes`_
+
+.. _user notes: https://storage.googleapis.com/earthenginepartners-hansen/GFC-2020-v1.8/download.html
+
+Data Preprocessing and Download on GEE
+________________________________________
+
+.. code-block:: javascript
+   :linenos:
+
+   var dataset = image.clip(table);
+
+   var forestLoss = dataset.select('lossyear');
+
+   Map.addLayer(forestLoss);
+
+   Export.image.toDrive({
+     image: forestLoss,
+     description: 'ForestLoss',
+     scale: 30,
+     region: geometry,
+     maxPixels:  1e13,
+     fileFormat: 'GeoTIFF',
+     folder:'GEE_classification',
+     formatOptions: {
+       cloudOptimized: true
+     },
+       skipEmptyTiles: true
+     });

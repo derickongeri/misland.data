@@ -19,8 +19,8 @@ Vegetation plays a key role in preventing desertification by providing shelter a
 .. _Copyright ESA-BELSPO, produced by Vito
 
 
-Preprocessing in Qgis
-----------------------
+Data Preprocessing in Qgis
+_____________________________
 
 1. Open the cliped landcover data(all 36 classes) and the ProbaV maximum NDVI composite data on Qgis
 
@@ -112,4 +112,4 @@ Preprocessing in Qgis
 
 
 Data Upload to MISLAND service
--------------------------------
+________________________________

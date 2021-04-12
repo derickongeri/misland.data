@@ -137,20 +137,32 @@
 <li class="toctree-l2"><a class="reference internal" href="Landcover.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Forest Loss</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Forest Loss</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-preprocessing-and-download-on-gee">Data Preprocessing and Download on GEE</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Ecologicalunits.html">Ecological Units Layer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Ecologicalunits.html#qgis-data-pre-processing-steps">QGIS Data pre-processing steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Ecologicalunits.html#uploading-the-ecological-units-to-misland-service">Uploading the Ecological Units to MISLAND Service</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cqi.html">Climate Quality Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cqi.html">Climate Quality Index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cqi.html#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cqi.html#uploading-the-arididy-index-to-misland-service">Uploading the Arididy Index to MISLAND Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cqi.html#uploading-the-rainfall-data-to-misland-service">Uploading the Rainfall Data to MISLAND Service</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="vqi.html">Vegetation Qulality Index</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vqi.html#preprocessing-in-qgis">Preprocessing in Qgis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqi.html#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vqi.html#data-upload-to-misland-service">Data Upload to MISLAND service</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sqi.html">Soil Quality Index</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mqi.html">Management Qulity Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mqi.html">Management Qulity Index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mqi.html#data-preprocessing-in-qgis">Data Preprocessing in Qgis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqi.html#uploading-the-data-to-misland-service">Uploading the data to MISLAND Service</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -218,6 +230,51 @@
             
   <div class="section" id="forest-loss">
 <h1>Forest Loss<a class="headerlink" href="#forest-loss" title="Permalink to this headline">¶</a></h1>
+<p>The High-resolution global forset change results from time-series analysis of Landsat images in characterizing global forest extent and change.</p>
+<p>The ‘first’ and ‘last’ bands are reference multispectral imagery from the first and last available years for Landsat spectral bands 3, 4, 5, and 7. Reference composite imagery represents median observations from a set of quality-assessed growing-season observations for each of these bands.</p>
+<p>MISLAND North Africal uses the Hansen Global Forest Change v1.8 to asses forest loss in the North Africa action zone. For more details of the Hansen Global Forest Change see the <a class="reference external" href="https://storage.googleapis.com/earthenginepartners-hansen/GFC-2020-v1.8/download.html">user notes</a></p>
+<div class="section" id="data-preprocessing-and-download-on-gee">
+<h2>Data Preprocessing and Download on GEE<a class="headerlink" href="#data-preprocessing-and-download-on-gee" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">dataset</span> <span class="o">=</span> <span class="nx">image</span><span class="p">.</span><span class="nx">clip</span><span class="p">(</span><span class="nx">table</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">forestLoss</span> <span class="o">=</span> <span class="nx">dataset</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;lossyear&#39;</span><span class="p">);</span>
+
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">forestLoss</span><span class="p">);</span>
+
+<span class="nx">Export</span><span class="p">.</span><span class="nx">image</span><span class="p">.</span><span class="nx">toDrive</span><span class="p">({</span>
+  <span class="nx">image</span><span class="o">:</span> <span class="nx">forestLoss</span><span class="p">,</span>
+  <span class="nx">description</span><span class="o">:</span> <span class="s1">&#39;ForestLoss&#39;</span><span class="p">,</span>
+  <span class="nx">scale</span><span class="o">:</span> <span class="mf">30</span><span class="p">,</span>
+  <span class="nx">region</span><span class="o">:</span> <span class="nx">geometry</span><span class="p">,</span>
+  <span class="nx">maxPixels</span><span class="o">:</span>  <span class="mf">1e13</span><span class="p">,</span>
+  <span class="nx">fileFormat</span><span class="o">:</span> <span class="s1">&#39;GeoTIFF&#39;</span><span class="p">,</span>
+  <span class="nx">folder</span><span class="o">:</span><span class="s1">&#39;GEE_classification&#39;</span><span class="p">,</span>
+  <span class="nx">formatOptions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">cloudOptimized</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+    <span class="nx">skipEmptyTiles</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+</div>
 </div>
 
 
