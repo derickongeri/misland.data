@@ -20,11 +20,12 @@ Vegetation plays a key role in preventing desertification by providing shelter a
 
 Compute and download PROBAV maxNDVI form Google Earth Engine
 ______________________________________________________________
-To compute and download PROBAV maximum NDVI composite for google earth engine. Open the `Google Earth Engine Code`_ and paste the lines of code provided below
+
+To compute and download PROBAV maximum NDVI composite from google earth engine. Open the `Google Earth Engine Code`_ and paste the lines of code provided below
 
 .. _Google Earth Engine Code: https://code.earthengine.google.com/
 
-.. code-block::
+.. code-block:: javascript
    :linenos:
 
     //Import the Proba-V data and North Africa region geometry
