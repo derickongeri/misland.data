@@ -18,6 +18,37 @@ Vegetation plays a key role in preventing desertification by providing shelter a
 .. _PROBAV NDVI: https://developers.google.com/earth-engine/datasets/catalog/VITO_PROBAV_C1_S1_TOC_100M
 .. _Copyright ESA-BELSPO, produced by Vito
 
+Compute and download PROBAV maxNDVI form Google Earth Engine
+______________________________________________________________
+To compute and download PROBAV maximum NDVI composite for google earth engine. Open the `Google Earth Engine Code`_ and paste the lines of code provided below
+
+.. _Google Earth Engine Code: https://code.earthengine.google.com/
+
+.. code-block::
+   :linenos:
+
+    //Import the Proba-V data and North Africa region geometry
+
+    var imageCollection = ee.ImageCollection("VITO/PROBAV/C1/S1_TOC_100M"),
+    table2 = ee.FeatureCollection("users/derickongeri/NorthAfrica");
+        
+    //filet the image collection by year, compute the maximum NDVI, and clip to the study area
+    var filteredCollection = imageCollection.filterDate('2018-01-01','2019-01-01')
+                                            .max()
+                                            .clip(table2);
+
+    var ndviImage = filteredCollection.select('NDVI');
+
+    Map.addLayer(ndviImage.randomVisualizer());
+
+    //Export the data to drive
+    Export.image.toDrive({
+      image: ndviImage,
+      description: 'NDVI_Max_2018',
+      maxPixels: 1e13,
+      scale: 100,
+      region: table2
+    })
 
 Data Preprocessing in Qgis
 _____________________________
