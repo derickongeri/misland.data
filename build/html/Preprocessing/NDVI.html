@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Landcover Data Preparation" href="Landcover.html" />
-    <link rel="prev" title="Data and Data sources" href="../Introduction/data.html" /> 
+    <link rel="prev" title="Data Preparation Models" href="../Introduction/models.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -127,6 +127,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-quality">Soil Quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#climate">Climate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/models.html">Data Preparation Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/models.html#the-graphical-modeler">The graphical modeler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#definition-of-inputs">Definition of inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#definition-of-the-workflow">Definition of the workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#interacting-with-the-canvas-and-elements">Interacting with the canvas and elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#saving-and-loading-models">Saving and loading models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Introduction/models.html#exporting-a-model-as-an-image-pdf-or-svg">Exporting a model as an image, PDF or SVG</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#editing-a-model">Editing a model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#editing-model-help-files-and-meta-information">Editing model help files and meta-information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/models.html#exporting-a-model-as-a-python-script">Exporting a model as a Python script</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -248,6 +264,8 @@
 <h2>MODIS NDVI<a class="headerlink" href="#modis-ndvi" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="data-download-from-google-earth-engine">
 <h3>Data download from Google Earth Engine<a class="headerlink" href="#data-download-from-google-earth-engine" title="Permalink to this headline">¶</a></h3>
+<p>The MOD13Q1 V6 product provides a Vegetation Index (VI) value at a per pixel basis. There are two primary vegetation layers. The first is the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The second vegetation layer is the Enhanced Vegetation Index (EVI) that minimizes canopy background variations and maintains sensitivity over dense vegetation conditions. The MODIS NDVI and EVI products are computed from atmospherically corrected bi-directional surface reflectances that have been masked for water, clouds, heavy aerosols, and cloud shadows.</p>
+<p>To compute and download the mean anual MODIS NDVI data from google earth engine. Open the <a class="reference external" href="https://code.earthengine.google.com/">Google Earth Engine Code</a> and paste the lines of code provided below</p>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -313,6 +331,9 @@
 <h2>Landsat derived NDVI, MSAVI, SAVI<a class="headerlink" href="#landsat-derived-ndvi-msavi-savi" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>Data download from Google Earth Engine<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Several annual NDVI composite techniques have been discussed to overcome current Landsat 5 artifacts.
+MISLAND uses annual NDVI products based on different percentiles in order to better qualify and quantify the Vegetation Loss Index.</p>
+<p>To compute and download desired percentile composites from google earth engine. Open the <a class="reference external" href="https://code.earthengine.google.com/">Google Earth Engine Code</a> and paste the lines of code provided below</p>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
@@ -787,7 +808,7 @@
         <a href="Landcover.html" class="btn btn-neutral float-right" title="Landcover Data Preparation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Introduction/data.html" class="btn btn-neutral float-left" title="Data and Data sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Introduction/models.html" class="btn btn-neutral float-left" title="Data Preparation Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

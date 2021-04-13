@@ -6,6 +6,9 @@ MODIS NDVI
 ____________
 Data download from Google Earth Engine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The MOD13Q1 V6 product provides a Vegetation Index (VI) value at a per pixel basis. There are two primary vegetation layers. The first is the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The second vegetation layer is the Enhanced Vegetation Index (EVI) that minimizes canopy background variations and maintains sensitivity over dense vegetation conditions. The MODIS NDVI and EVI products are computed from atmospherically corrected bi-directional surface reflectances that have been masked for water, clouds, heavy aerosols, and cloud shadows.
+
+To compute and download the mean anual MODIS NDVI data from google earth engine. Open the `Google Earth Engine Code`_ and paste the lines of code provided below
 
 .. Code-block:: javascript
    :linenos:
@@ -42,10 +45,16 @@ Data download from Google Earth Engine
 
 
 Landsat derived NDVI, MSAVI, SAVI
-__________________________________
+____________________________________
 
 Data download from Google Earth Engine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Several annual NDVI composite techniques have been discussed to overcome current Landsat 5 artifacts.
+MISLAND uses annual NDVI products based on different percentiles in order to better qualify and quantify the Vegetation Loss Index.
+
+To compute and download desired percentile composites from google earth engine. Open the `Google Earth Engine Code`_ and paste the lines of code provided below
+
+.. _Google Earth Engine Code: https://code.earthengine.google.com/
 
 .. code-block:: javascript
    :linenos:
