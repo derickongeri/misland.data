@@ -32,6 +32,7 @@ release = '0.0.1'
 # ones.
 import sphinx_rtd_theme
 extensions = [
+    
 ]
 
 # Add any paths that contain templates here, relative to this directory.

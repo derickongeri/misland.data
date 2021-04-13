@@ -145,3 +145,63 @@ _____________________________
 
 Data Upload to MISLAND service
 ________________________________
+
+
+.. |addToProject| image:: ../_static/common/mAddToProject.png
+   :width: 1.5em
+.. |checkbox| image:: ../_static/common/checkbox.png
+   :width: 1.3em
+.. |deleteSelected| image:: ../_static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |editCopy| image:: ../_static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: ../_static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: ../_static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |expression| image:: ../_static/common/mIconExpression.png
+   :width: 1.5em
+.. |fileOpen| image:: ../_static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: ../_static/common/mActionFileSave.png
+   :width: 1.5em
+.. |integer| image:: ../_static/common/mIconFieldInteger.png
+   :width: 1.5em
+.. |processing| image:: ../_static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingHelp| image:: ../_static/common/mActionEditHelpContent.png
+   :width: 1.5em
+.. |processingModel| image:: ../_static/common/processingModel.png
+   :width: 1.5em
+.. |processingOutput| image:: ../_static/common/mIconModelOutput.png
+   :width: 1.5em
+.. |qgsProjectFile| image:: ../_static/common/mIconQgsProjectFile.png
+   :width: 1.5em
+.. |redo| image:: ../_static/common/mActionRedo.png
+   :width: 1.5em
+.. |saveAsPDF| image:: ../_static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsPython| image:: ../_static/common/mActionSaveAsPython.png
+   :width: 1.5em
+.. |saveAsSVG| image:: ../_static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: ../_static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |selectAll| image:: ../_static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |start| image:: ../_static/common/mActionStart.png
+   :width: 1.5em
+.. |unchecked| image:: ../_static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |undo| image:: ../_static/common/mActionUndo.png
+   :width: 1.5em
+.. |zoomActual| image:: ../_static/common/mActionZoomActual.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: ../_static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: ../_static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: ../_static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomOut| image:: ../_static/common/processingModel.png
+   :width: 1.5em
