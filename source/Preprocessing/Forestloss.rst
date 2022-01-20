@@ -85,7 +85,7 @@ ____________________________
 
     Merging the Forestloss year data
 
-3. On the Merge dialog, **Input layers** option choose the |selectAll|:sup:`Select All` option and click on :guilabel:`OK`.
+1. On the Merge dialog, **Input layers** option choose the |selectAll|:sup:`Select All` option and click on :guilabel:`OK`.
 
 .. figure:: ../_static/Images/fr3.png
     :width: 742

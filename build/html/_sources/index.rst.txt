@@ -42,6 +42,7 @@ The core-service provides land degradation indicators for six North African Coun
    
    /Introduction/data
    /Introduction/models
+   /Introduction/Introduction
 
 .. toctree::
    :maxdepth: 3
@@ -55,6 +56,8 @@ The core-service provides land degradation indicators for six North African Coun
    /Preprocessing/vqi
    /Preprocessing/sqi
    /Preprocessing/mqi
+   /Preprocessing/soc
+   /Preprocessing/CVI
 
 
 Indices and tables
